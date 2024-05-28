@@ -1,0 +1,75 @@
+.project {
+    box-sizing: border-box;
+    padding: 1vmax;
+  }
+  .sub-title{
+font: 500 2rem "Roboto";
+color: #fff;
+margin-left: 5vmax;
+  }
+  .project-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin: 50px auto;
+    
+  }
+
+  
+  .project-list summary {
+    font-size: 25px;
+  }
+  
+  .project-item {
+    padding: 30px;
+    border-radius: 30px;
+    width: 30vw;
+    height: 40vh;
+    background: rgb(34,193,195);
+    background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+    transition: all 0.5s;
+    transition: all 0.5s ease;
+    transform-style: preserve-3d;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  .project-item:hover {
+    color: #fff;
+    background: rgb(182,11,199);
+    background: linear-gradient(90deg, rgba(182,11,199,1) 14%, rgba(189,147,209,1) 29%, rgba(123,26,196,1) 55%, rgba(172,19,120,1) 67%);
+  
+  }
+  .project-item i {
+    font-size: 50px;
+    padding-left: 0;
+    padding-bottom: 30px;
+  }
+  
+  .project-title {
+     font: 500 2rem "Roboto";
+    margin-bottom: 15px;
+    color: #fff;
+  }
+  .project-p{
+    font: 500 1vmax "Rubik";
+    font-size: 1rem;
+    line-height: 1.5;
+    height: calc(4 * 1.5em); /* Calculate the height for 4 lines */
+    overflow: hidden; /* Hide overflowing text */
+    display: -webkit-box; /* Required for text truncation */
+    -webkit-box-orient: vertical; /* Required for text truncation */
+    -webkit-line-clamp: 4; /* Number of lines to show */
+    text-overflow: ellipsis; /* Show ellipsis (...) */
+  }
+  .project-link {
+    text-decoration: none;
+    margin-top: 20px;
+    color: #fff;
+    display: inline-block;
+    background-color: red;
+    padding: 0.7vmax;
+    border-radius: 7px;
+    font: 400 1vmax "Rubik";
+  }
+  
+ 

@@ -1,0 +1,96 @@
+.header-mainContainer{
+   width: 100%;
+   height: 5vmax;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   animation: fadeInScale 0.5s ease-out;
+   box-shadow: 2px 3px 10px rgba(242, 235, 235, 0.23);
+}
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: translateY(-20px) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+.header-mainContainerBox{
+    margin-top: 1vmax;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    width: 90%;
+    height: 100%;
+    padding: 0.5vmax 1vmax;
+    align-items: center;
+}
+.header-logoContainer img{
+    height: 2.5vmax;
+    width: 2.5vmax;
+   border-radius: 50%;
+}
+.header-navigationContainer ul{
+    display: flex;
+    justify-content: space-evenly;
+  
+   
+}
+.header-navigationContainer ul li{
+  position: relative;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  font: 500 1.1vmax "Rubik";
+  box-sizing: border-box;
+  padding: 0.5vmax;
+  cursor: pointer;
+  transition: all 0.3s;
+ 
+}
+
+.header-navigationContainer ul li::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: red;
+  transition: width 0.3s;
+}
+.header-navigationContainer ul li:hover::before {
+  width: 100%;
+}
+.header-navigationContainer ul > a{
+  text-decoration: none;
+}
+.header-navigationContainer ul > a:active{
+  color: #3c164e;
+
+}
+.header-navigationContainer ul .active{
+
+  background-color: #fff;
+   border-radius: 6px;
+}
+
+.header-hireButton button{
+    width: 10vmax;
+    margin-left: 4vmax;
+    padding: 1.5vmax 0.1;
+    height: 2.8vmax;
+  color: #fff;
+    font: 400 1.1vmax "Roboto";
+  background: linear-gradient(to right,#ac1378,#6610a7,#3c164e,#a824b5);
+  border-radius: 7px;
+  transition: all 0.2s;
+}
+.header-hireButton button:hover{
+  cursor: pointer;
+  box-shadow: 2px 3px 10px rgba(242, 235, 235, 0.23);
+
+  background: linear-gradient(to right,#7130a2,#7130a2,#7130a2,#7130a2);
+}

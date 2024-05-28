@@ -1,0 +1,46 @@
+.hireMe {
+    padding: 50px 0;
+    background: linear-gradient(135deg, #ff6d70, #0072ff);
+    color: #fff;
+    height: 100vh;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .title {
+    text-align: center;
+    font: 500 2rem "Rubik";
+    margin-bottom: 30px;
+  }
+  
+  .content {
+    margin-top: 2vmax;
+    display: flex;
+    margin-left: -2vmax;
+    justify-content: space-between;
+  }
+  
+  .description {
+    flex: 1;
+    margin-right: 20px;
+  }
+  .description p{
+    font: 500 1vmax "Roboto";
+  }
+  .contact {
+    flex: 1;
+  }
+  
+  .contact h2 {
+   font: 400 1.2vmax "Rubik";
+    margin-bottom: 20px;
+  }
+  
+  .contact p {
+    margin-bottom: 10px;
+    font: 500 1vmax "Rubik";
+  }

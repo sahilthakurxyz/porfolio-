@@ -1,0 +1,234 @@
+.home-mainContainer{
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(to right,#0f092a,#080619,#030314,#05092f );
+
+}
+.home-mainContainerBox{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.home-mainContainerHeaderBox{
+    margin-top: 3vmax;
+    width: 85%;
+    height: 90vh;
+    border: 10px solid gray;
+}
+.home-personalInfoContainer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2.5vmax;
+    padding: 1vmax 1.5vmax;
+  }
+  
+  .home-personalInfoContainer > div {
+    width: 48%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    transform: translateY(0);
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-sizing: border-box;
+  }
+  
+  
+.home-personalInfoContainer > div:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+  }
+
+  .personal-info .hi {
+    color: gray;
+    font: 400 1vmax "Rubik";
+    position: relative;
+    overflow: hidden; /* Ensure the text is contained within the element */
+    display: inline-block;
+  }
+  
+  .personal-info .hi::before, .personal-info .hi::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: white;
+    z-index: 1;
+  }
+  
+  .personal-info .hi::before {
+    top: 0;
+    left: -100%;
+    animation: slideIn 1s forwards;
+  }
+  
+  .personal-info .hi::after {
+    bottom: 0;
+    right: -100%;
+    animation: slideIn 1s 0.5s forwards;
+  }
+  
+  @keyframes slideIn {
+    to {
+      left: 100%;
+      right: 100%;
+    }
+  }
+  .personal-info .name{
+    margin-top: 1vmax;
+   color: #fff;
+    font: 400 1.5vmax "Rubik";
+    animation: glowEffect 1.5s infinite alternate;
+    
+  }
+  @keyframes glowEffect {
+    from {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #00ff95, 0 0 70px #00ff95, 0 0 80px #00ff95, 0 0 100px #00ff95;
+    }
+    to {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #00ff95, 0 0 70px #00ff95, 0 0 80px #00ff95, 0 0 100px #00ff95;
+    }
+  }
+  
+  .personal-info .profession {
+    font: 500 2.3vmax "Roboto";
+    color: rgb(154, 33, 76);
+    padding: 0.5vmax 0;
+    box-sizing: border-box;
+    display: inline-block;
+    animation: scaleGlowEffect 1s infinite alternate, glowEffect 1s infinite alternate;
+  }
+  
+  @keyframes scaleGlowEffect {
+    from {
+      transform: scale(1);
+    }
+    to {
+      transform: scale(1.05);
+    }
+  }
+  
+  @keyframes glowEffect {
+    from {
+      text-shadow: 0 0 10px rgba(154, 33, 76, 0.7), 0 0 20px rgba(154, 33, 76, 0.7), 0 0 30px rgba(154, 33, 76, 0.7);
+    }
+    to {
+      text-shadow: 0 0 20px rgba(154, 33, 76, 0.9), 0 0 30px rgba(154, 33, 76, 0.9), 0 0 40px rgba(154, 33, 76, 0.9);
+    }
+  }
+  
+  @keyframes assemble {
+    from {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .personal-info .profession span {
+    display: inline-block;
+    animation: assemble 1s forwards;
+  }
+  
+  .personal-info .profession span:nth-child(odd) {
+    animation: assemble 1s forwards, scaleGlowEffect 1s infinite alternate, glowEffect 1s infinite alternate;
+    animation-delay: calc(var(--i) * 0.1s);
+  }
+  
+  .personal-info .profession span:nth-child(even) {
+    animation: assemble 1s forwards, scaleGlowEffect 1s infinite alternate, glowEffect 1s infinite alternate;
+    animation-delay: calc(var(--i) * 0.1s);
+  }
+  .social-links{
+    width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+   justify-content: start;
+  }
+  .social-links a{
+    display: flex;
+    align-items: center;
+ 
+   border: 1px solid transparent;
+   height: 2.5vmax;
+   width: 2.5vmax;
+   box-sizing: border-box;
+   padding: 0.5vmax;
+   border-radius: 50%;
+   margin-left: 0.5vmax;
+   transition: all 0.3s; /* Add transition for smooth animation */
+  }
+  .social-links a:hover {
+    transform: scale(1.1); /* Scale up the icon on hover */
+    border-color: #3c164e; /* Change border color on hover */
+    background-color: #3c164e; /* Change background color on hover */
+    border: 1px solid #fff;
+  }
+  .social-links a svg{
+    margin-top: 0.1vmax;
+    color: #fff;
+    font: 400 1.2vmax "Rubik";
+  }
+  .personal-info button {
+    margin-top: 1.5vmax;
+    padding: 10px 20px;
+    background-color: #3c164e;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .personal-info button:hover {
+    background-color: #522a78;
+  }
+  
+
+  .image-container {
+    display: flex;
+    justify-content: end;
+    width: 25vw;
+    object-fit: contain;
+    overflow: hidden;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    perspective: 1000px; /* Add perspective for 3D effect */
+    transform-style: preserve-3d; /* Maintain 3D transformations for children */
+    animation: rotateContainer 3s ease-out; /* One-time rotation animation */
+  }
+  
+  @keyframes rotateContainer {
+    from {
+      transform: rotateY(0deg);
+    }
+    to {
+      transform: rotateY(360deg);
+    }
+  }
+  
+  .image-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 70%;
+    height: 90%;
+    z-index: 1;
+  }
+  
+  .image-container img {
+   width: 25vw;
+   height: 55vh;
+    object-fit: cover;
+    border-radius: 50%;
+    mix-blend-mode:darken;
+    position: relative;
+    z-index: 2;
+   
+  }
+  

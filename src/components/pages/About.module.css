@@ -1,0 +1,134 @@
+.about {
+    padding: 2rem 0;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 2rem;
+  }
+  
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  
+  .aboutCol2 {
+    flex: 1;
+    padding: 1rem;
+  }
+
+  .subTitle {
+    
+    font: 500 2rem "Rubik";
+    color: #2f1ee8;
+    margin-bottom: 1rem;
+  }
+  
+  .pColor {
+    margin: 0 auto;
+    width: 50%;
+    box-sizing: border-box;
+    background-color: #fff;
+    padding: 1vmax;
+    color: #666;
+    line-height: 1.6;
+    font: 500 1.3vmax "Roboto";
+    box-shadow: 1px 3px 7px 2px rgba(227, 211, 211, 0.23);
+  }
+  
+  .tabTitles {
+    display: flex;
+    margin-top: 2rem;
+  }
+  
+  .tabLinks {
+    padding: 0.5rem 1rem;
+    margin-right: 1rem;
+    cursor: pointer;
+    color: #666;
+    transition: color 0.3s;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .tabLinks::before,
+  .tabLinks::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: white;
+    z-index: 1;
+  }
+  
+  .tabLinks::before {
+    top: 0;
+    left: -100%;
+    animation: slideIn 1s forwards;
+  }
+  
+  .tabLinks::after {
+    bottom: 0;
+    right: -100%;
+    animation: slideIn 1s 0.5s forwards;
+  }
+  
+  @keyframes slideIn {
+    to {
+      left: 100%;
+      right: 100%;
+    }
+  }
+  
+  .tabLinks:hover {
+    color: #000;
+  }
+  
+  .activeLink {
+    color: #000;
+    font-weight: bold;
+  }
+  
+  .tabContents {
+    display: none;
+    margin-top: 1rem;
+  }
+  
+  .activeTab {
+    display: block;
+  }
+  
+  .tabContents ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .tabContents li {
+    margin-bottom: 0.5rem;
+    padding: 0.5rem;
+    background: #fff;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+  }
+  
+  .tabContents li:hover {
+    transform: translateY(-5px);
+  }
+  
+  .tabContents li span {
+    font-weight: bold;
+    color: #333;
+  }
